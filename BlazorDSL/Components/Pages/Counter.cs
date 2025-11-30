@@ -18,7 +18,9 @@ public partial class Counter : ComponentBase
                     .div(
                         [], 
                         inner => inner.ForEach(
-                            names,
+                            from name in names
+                            where name.StartsWith("J")
+                            select name,
                             (inner, name) => inner.p(name)
                         )
                     )
