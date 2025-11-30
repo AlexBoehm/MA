@@ -62,6 +62,14 @@ public class EmptyNode : Node {
     private EmptyNode() {}
 }
 
+public class ComponentNode : Node {
+    public Type Type { get; private set; }
+
+    public ComponentNode(Type type) {
+        Type = type;
+    }
+}
+
 public class Attribute {
     public string Name { get; set; }
     public object Value { get; set; }

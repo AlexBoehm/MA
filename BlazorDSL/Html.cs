@@ -38,4 +38,11 @@ static class Html {
         );
 
     #endregion
+
+    #region Components
+
+        public static Node Component<TComponent>()
+            => new ComponentNode(typeof(TComponent));
+
+    #endregion
 }

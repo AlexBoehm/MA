@@ -9,6 +9,7 @@ public partial class Counter : WebComponent
     protected override Node Render() =>
         div(
             h1("counter"),
+            Component<Greeting>(),
             div(
                 [className("box")],
                 p("Current Count: " + currentCount),

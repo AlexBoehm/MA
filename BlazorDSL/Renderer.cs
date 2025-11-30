@@ -14,6 +14,7 @@ static class Renderer {
             CondNode n => RenderCondNode(builder, sequenceNumber, n),
             ArrayNode n => RenderArrayNode(builder, sequenceNumber, n),
             EmptyNode _ => RenderEmptyNode(builder, sequenceNumber),
+            ComponentNode n => RenderComponentNode(builder, sequenceNumber, n),
             _ => throw new Exception("Unexpected node of Type " + node.GetType().FullName)
         };
     }
@@ -73,6 +74,12 @@ static class Renderer {
 
     private static int RenderEmptyNode(RenderTreeBuilder builder, int sequenceNumber) {
         // Nichts zu rendern, die Sequenznummer muss jedoch erhöht werden
+        return sequenceNumber + 1;
+    }
+
+    private static int RenderComponentNode(RenderTreeBuilder builder, int sequenceNumber, ComponentNode n) {
+        builder.OpenComponent(sequenceNumber, n.Type);            
+        builder.CloseComponent();
         return sequenceNumber + 1;
     }
 }
