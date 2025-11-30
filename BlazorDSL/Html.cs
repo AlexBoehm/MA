@@ -30,7 +30,14 @@ static class Html {
         => new TagNode("body", attributes, inner);
     public static Node script(Attribute[] attributes, params Node[] inner)
         => new TagNode("script", attributes, inner);
+    public static Node a(Attribute[] attributes, string text)
+        => new TagNode("a", attributes, Html.text(text));
 
+    public static Node main(Attribute[] attributes, params Node[] inner)
+        => new TagNode("main", attributes, inner);
+
+    public static Node article(Attribute[] attributes, params Node[] inner)
+        => new TagNode("article", attributes, inner);
 
     #endregion
 
@@ -43,6 +50,9 @@ static class Html {
     public static Node empty() => EmptyNode.Instance;
 
     #region Attributes
+
+    public static Attribute id(string value)
+        => new Attribute("id", value);
 
     public static Attribute className(string value)
         => new Attribute("class", value);
@@ -73,6 +83,9 @@ static class Html {
 
     public static Attribute src(string value)
         => new Attribute("src", value);
+
+    public static Attribute target(string value)
+        => new Attribute("target", value);
 
     public static Attribute onClick(object sender, Action callback)
         => new Attribute(
@@ -150,4 +163,8 @@ static class Html {
     ;
 
     #endregion
+
+    public static Node fragment(RenderFragment fragment)
+        => new RenderFragmentNode(fragment);
+    
 }
