@@ -38,6 +38,14 @@ public class TagNode : Node {
     protected static Attribute[] _emptyAttributes = new Attribute[0];
 }
 
+public class ArrayNode : Node {
+    public Node[] Inner { get; private set; }
+
+    public ArrayNode(Node[] inner) {
+        this.Inner = inner;
+    }
+}
+
 public class Attribute {
     public string Name { get; set; }
     public object Value { get; set; }

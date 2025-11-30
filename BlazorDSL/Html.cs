@@ -18,6 +18,9 @@ static class Html {
         => new TagNode("button", attributes, Html.text(text));
     #endregion
 
+    public static Node Tags(params Node[] nodes)
+        => new ArrayNode(nodes.ToArray());
+
     #region Attributes
 
     public static Attribute className(string className)

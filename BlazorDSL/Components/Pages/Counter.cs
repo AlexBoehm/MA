@@ -15,7 +15,13 @@ public partial class Counter : WebComponent
                 div(
                     from name in names
                     where name.StartsWith("J")
-                    select p(name)
+                    select Tags(
+                        p(name),
+                        button(
+                            [onClick(this, () => names.Remove(name))],
+                            "delete"
+                        )
+                    )
                 ),
                 button([
                     className("btn btn-primary"),
@@ -25,7 +31,7 @@ public partial class Counter : WebComponent
             )
         );
 
-    string[] names = [
+    List<string> names = [
         "George Washington",
         "John Adams",
         "Thomas Jefferson",

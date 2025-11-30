@@ -11,6 +11,7 @@ static class Renderer {
         return node switch {
             TagNode n => RenderTagNode(builder, sequenceNumber, n),
             TextNode n => RenderTextNode(builder, sequenceNumber, n),
+            ArrayNode n => RenderArrayNode(builder, sequenceNumber, n),
             _ => throw new Exception("Unexpected node of Type " + node.GetType().FullName)
         };
     }
@@ -38,6 +39,20 @@ static class Renderer {
 
     private static int RenderTextNode(RenderTreeBuilder builder, int sequenceNumber, TextNode n) {
         builder.AddContent(sequenceNumber, n.Text);
+        return sequenceNumber + 1;
+    }
+
+    private static int RenderArrayNode(RenderTreeBuilder builder, int sequenceNumber, ArrayNode n) {
+        builder.OpenRegion(sequenceNumber);
+
+        var nextSequenceInRegion = 0;
+
+        for (int i = 0; i < n.Inner.Length; i++) {
+            nextSequenceInRegion = Render(builder, n.Inner[i], nextSequenceInRegion);
+        }
+
+        builder.CloseRegion();
+
         return sequenceNumber + 1;
     }
 }
