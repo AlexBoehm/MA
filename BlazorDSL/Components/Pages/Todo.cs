@@ -6,7 +6,7 @@ namespace BlazorDSL.Components.Pages;
 
 [Route("/todo")]
 public partial class Todo : WebComponent
-{        
+{
     protected override Node Render() =>
         Tags(
             h2("Todo-Liste DSL"),
@@ -14,13 +14,7 @@ public partial class Todo : WebComponent
             div([className("TodoList")],
                 ul(
                     from item in _items
-                    select li([className(item.Done ? "Done" : "")],
-                        input([
-                            type("checkbox"),
-                            bind.change.@checked(item.Done, x => item.Done = x)
-                        ]),
-                        div(item.Text)
-                    )
+                    select RenderTodoItem(item)
                 ),
 
                 div([className("DoneDisplay")],
@@ -35,6 +29,16 @@ public partial class Todo : WebComponent
                     button([type("submit")], "Hinzufügen")
                 )
             )
+        );
+
+    private Node RenderTodoItem(TodoItem item) =>
+        li([className(item.Done ? "Done" : "")],
+            input([
+                type("checkbox"),
+                bind.change.@checked(
+                    item.Done, x => item.Done = x)
+            ]),
+            div(item.Text)
         );
 
     private List<TodoItem> _items = [
