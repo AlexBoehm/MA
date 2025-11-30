@@ -12,6 +12,12 @@ public partial class Counter : WebComponent
             div(
                 [className("box")],
                 p("Current Count: " + currentCount),
+                div(
+                    (
+                        from name in names
+                        select p(name)
+                    ).ToArray()
+                ),
                 button([
                     className("btn btn-primary"),
                     onClick(this, IncrementCount)],
@@ -19,6 +25,16 @@ public partial class Counter : WebComponent
                 )
             )
         );
+
+    string[] names = [
+        "George Washington",
+        "John Adams",
+        "Thomas Jefferson",
+        "James Madison",
+        "James Monroe",
+        "John Quincy Adams",
+        "Andrew Jackson"
+    ];
 
     private int currentCount = 0;
 
