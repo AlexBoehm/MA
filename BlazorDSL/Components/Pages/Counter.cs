@@ -5,7 +5,7 @@ namespace BlazorDSL.Components.Pages;
 
 [Route("/counter")]
 public partial class Counter : WebComponent
-{        
+{
     protected override Node Render() =>
         div(
             h1("counter"),
@@ -14,12 +14,15 @@ public partial class Counter : WebComponent
                 p("Current Count: " + currentCount),
                 div(
                     from name in names
-                    where name.StartsWith("J")
                     select Tags(
                         p(name),
-                        button(
-                            [onClick(this, () => names.Remove(name))],
-                            "delete"
+                        Cond(
+                            name.StartsWith("J"),
+                            () => button(
+                                [onClick(this, () => names.Remove(name))],
+                                "delete"
+                            ),
+                            () => p("")
                         )
                     )
                 ),

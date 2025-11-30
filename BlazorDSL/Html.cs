@@ -21,6 +21,9 @@ static class Html {
     public static Node Tags(params Node[] nodes)
         => new ArrayNode(nodes.ToArray());
 
+    public static Node Cond(bool condition, Func<Node> nodesTrue, Func<Node> nodeFalse)
+        => new CondNode(condition, condition ? nodesTrue() : nodeFalse());
+
     #region Attributes
 
     public static Attribute className(string className)

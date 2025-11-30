@@ -38,6 +38,17 @@ public class TagNode : Node {
     protected static Attribute[] _emptyAttributes = new Attribute[0];
 }
 
+public class CondNode : Node {
+    public bool Condition {get; private set; }
+    public Node Content {get; private set; }
+        
+    public CondNode(bool condition, Node content)
+    {
+        Condition = condition;
+        Content = content;
+    }
+}
+
 public class ArrayNode : Node {
     public Node[] Inner { get; private set; }
 

@@ -11,6 +11,7 @@ static class Renderer {
         return node switch {
             TagNode n => RenderTagNode(builder, sequenceNumber, n),
             TextNode n => RenderTextNode(builder, sequenceNumber, n),
+            CondNode n => RenderCondNode(builder, sequenceNumber, n),
             ArrayNode n => RenderArrayNode(builder, sequenceNumber, n),
             _ => throw new Exception("Unexpected node of Type " + node.GetType().FullName)
         };
@@ -40,6 +41,19 @@ static class Renderer {
     private static int RenderTextNode(RenderTreeBuilder builder, int sequenceNumber, TextNode n) {
         builder.AddContent(sequenceNumber, n.Text);
         return sequenceNumber + 1;
+    }
+
+    private static int RenderCondNode(RenderTreeBuilder builder, int sequenceNumber, CondNode condNode)
+    {
+        var sequenceNumberToUse = condNode.Condition ? sequenceNumber : sequenceNumber + 1;
+
+        builder.OpenRegion(sequenceNumberToUse);
+        Render(builder, condNode.Content);
+        builder.CloseRegion();
+
+        // Nichts zu rendern, die Sequenznummer muss um 2 erhöht werden, da jeder Zweig eine
+        // eindeutige Sequenznummer bekommt.
+        return sequenceNumber + 2;
     }
 
     private static int RenderArrayNode(RenderTreeBuilder builder, int sequenceNumber, ArrayNode n) {
