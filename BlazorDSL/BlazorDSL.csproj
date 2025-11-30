@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
 	<EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lib\Lib.csproj" />
+  </ItemGroup>
 </Project>

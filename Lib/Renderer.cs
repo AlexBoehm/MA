@@ -2,7 +2,7 @@
 
 namespace BlazorDSL;
 
-static class Renderer {
+public static class Renderer {
     public static void Render(RenderTreeBuilder builder, Node node) {
         Render(builder, node, 0);
     }

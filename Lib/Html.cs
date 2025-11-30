@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Components.Web;
 
 namespace BlazorDSL;
 
-static class Html {
+public static class Html {
     #region Tags
     public static Node div(Attribute[] attributes, params Node[] inner)
         => new TagNode("div", attributes, inner);
