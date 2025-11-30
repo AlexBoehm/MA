@@ -99,12 +99,33 @@ public class RenderFragmentNode : Node {
         }
     }
 
-public class Attribute {
+public abstract class Attribute {
+}
+
+public sealed class SimpleAttribute : Attribute
+{
     public string Name { get; private set; }
     public object Value { get; private set; }
 
-    public Attribute(string key, object value) {
+    public SimpleAttribute(string key, object value) {
         this.Name = key;
         this.Value = value;
+    }
+}
+
+public sealed class BindAttribute<TValue> : Attribute
+{
+    public string Event { get; private set; }
+    public TValue Value { get; private set; }
+    public Action<TValue> OnChange { get; private set; }
+    public Object Receiver { get; private set; }
+
+
+    public BindAttribute(object reciver, string @event, TValue value, Action<TValue> onChange)
+    {
+        this.Event = @event;
+        this.OnChange = onChange;
+        this.Value = value;
+        this.Receiver = reciver;
     }
 }

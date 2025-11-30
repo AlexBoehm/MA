@@ -6,577 +6,577 @@ using Microsoft.AspNetCore.Components.Web;
 namespace BlazorDSL {
     static partial class Html {
             public static Attribute onFocus(object sender, Action<FocusEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onfocus",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onBlur(object sender, Action<FocusEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onblur",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onFocusIn(object sender, Action<FocusEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onfocusin",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onFocusOut(object sender, Action<FocusEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onfocusout",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onMouseOver(object sender, Action<MouseEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onmouseover",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onMouseOut(object sender, Action<MouseEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onmouseout",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onMouseLeave(object sender, Action<MouseEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onmouseleave",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onMouseEnter(object sender, Action<MouseEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onmouseenter",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onMouseMove(object sender, Action<MouseEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onmousemove",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onMouseDown(object sender, Action<MouseEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onmousedown",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onMouseUp(object sender, Action<MouseEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onmouseup",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onClick(object sender, Action<MouseEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onclick",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onDblClick(object sender, Action<MouseEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "ondblclick",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onWheel(object sender, Action<WheelEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onwheel",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onMouseWheel(object sender, Action<WheelEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onmousewheel",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onContextMenu(object sender, Action<MouseEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "oncontextmenu",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onDrag(object sender, Action<DragEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "ondrag",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onDragEnd(object sender, Action<DragEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "ondragend",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onDragEnter(object sender, Action<DragEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "ondragenter",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onDragLeave(object sender, Action<DragEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "ondragleave",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onDragOver(object sender, Action<DragEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "ondragover",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onDragStart(object sender, Action<DragEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "ondragstart",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onDrop(object sender, Action<DragEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "ondrop",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onKeyDown(object sender, Action<KeyboardEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onkeydown",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onKeyUp(object sender, Action<KeyboardEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onkeyup",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onKeyPress(object sender, Action<KeyboardEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onkeypress",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onChange(object sender, Action<ChangeEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onchange",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onInput(object sender, Action<ChangeEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "oninput",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onInvalid(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "oninvalid",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onReset(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onreset",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onSelect(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onselect",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onSelectStart(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onselectstart",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onSelectionChange(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onselectionchange",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onSubmit(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onsubmit",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onBeforeCopy(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onbeforecopy",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onBeforeCut(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onbeforecut",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onBeforePaste(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onbeforepaste",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onCopy(object sender, Action<ClipboardEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "oncopy",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onCut(object sender, Action<ClipboardEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "oncut",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onPaste(object sender, Action<ClipboardEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onpaste",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onTouchCancel(object sender, Action<TouchEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "ontouchcancel",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onTouchEnd(object sender, Action<TouchEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "ontouchend",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onTouchMove(object sender, Action<TouchEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "ontouchmove",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onTouchStart(object sender, Action<TouchEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "ontouchstart",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onTouchEnter(object sender, Action<TouchEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "ontouchenter",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onTouchLeave(object sender, Action<TouchEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "ontouchleave",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onGotPointerCapture(object sender, Action<PointerEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "ongotpointercapture",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onLostPointerCapture(object sender, Action<PointerEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onlostpointercapture",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onPointerCancel(object sender, Action<PointerEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onpointercancel",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onPointerDown(object sender, Action<PointerEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onpointerdown",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onPointerEnter(object sender, Action<PointerEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onpointerenter",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onPointerLeave(object sender, Action<PointerEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onpointerleave",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onPointerMove(object sender, Action<PointerEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onpointermove",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onPointerOut(object sender, Action<PointerEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onpointerout",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onPointerOver(object sender, Action<PointerEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onpointerover",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onPointerUp(object sender, Action<PointerEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onpointerup",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onCanPlay(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "oncanplay",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onCanPlayThrough(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "oncanplaythrough",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onCueChange(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "oncuechange",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onDurationChange(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "ondurationchange",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onEmptied(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onemptied",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onPause(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onpause",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onPlay(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onplay",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onPlaying(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onplaying",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onRateChange(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onratechange",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onSeeked(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onseeked",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onSeeking(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onseeking",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onStalled(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onstalled",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onStop(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onstop",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onSuspend(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onsuspend",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onTimeUpdate(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "ontimeupdate",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onVolumeChange(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onvolumechange",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onWaiting(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onwaiting",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onLoadStart(object sender, Action<ProgressEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onloadstart",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onTimeout(object sender, Action<ProgressEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "ontimeout",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onAbort(object sender, Action<ProgressEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onabort",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onLoad(object sender, Action<ProgressEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onload",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onLoadEnd(object sender, Action<ProgressEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onloadend",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onProgress(object sender, Action<ProgressEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onprogress",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onError(object sender, Action<Microsoft.AspNetCore.Components.Web.ErrorEventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onerror",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onActivate(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onactivate",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onBeforeActivate(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onbeforeactivate",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onBeforeDeactivate(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onbeforedeactivate",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onDeactivate(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "ondeactivate",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onEnded(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onended",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onFullscreenChange(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onfullscreenchange",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onFullscreenError(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onfullscreenerror",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onLoadedData(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onloadeddata",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onLoadedMetadata(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onloadedmetadata",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onPointerLockChange(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onpointerlockchange",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onPointerLockError(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onpointerlockerror",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onReadyStateChange(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onreadystatechange",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onScroll(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onscroll",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onToggle(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "ontoggle",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onCancel(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "oncancel",
                     EventCallback.Factory.Create(sender, callback)
                 );
 
             public static Attribute onClose(object sender, Action<EventArgs> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     "onclose",
                     EventCallback.Factory.Create(sender, callback)
                 );

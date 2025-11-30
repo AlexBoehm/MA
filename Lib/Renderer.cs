@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Components.Rendering;
+﻿using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Rendering;
+using static BlazorDSL.Html.bind;
 
 namespace BlazorDSL;
 
@@ -95,19 +97,49 @@ public static class Renderer {
     private static void AddComponentAttributes(int sequenceNumber, RenderTreeBuilder builder, Attribute[] attributes, out int nextSequenceNumber) {
         nextSequenceNumber = sequenceNumber;
 
-        foreach (var item in attributes)
+        foreach (SimpleAttribute item in attributes)
         {
             builder.AddComponentParameter(nextSequenceNumber, item.Name, item.Value);
             nextSequenceNumber++;
         }
     }
 
+    static IEnumerable<KeyValuePair<string, object>> GetAttributes(Attribute attribute)
+    {
+        if(attribute is SimpleAttribute simpleAttribute) {
+            yield return new KeyValuePair<string, object>(simpleAttribute.Name, simpleAttribute.Value);
+        }
+
+        if(attribute is BindAttribute<string> bindString)
+        {
+            yield return new KeyValuePair<string, object>(
+                "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(bindString.Value)                
+            );
+
+            yield return new KeyValuePair<string, object>(
+                bindString.Event, 
+                EventCallback.Factory.CreateBinder(bindString.Receiver, bindString.OnChange, bindString.Value)
+            );
+        }
+
+        if(attribute is BindAttribute<bool> bindBool)
+        {
+            yield return new KeyValuePair<string, object>(
+                "checked", Microsoft.AspNetCore.Components.BindConverter.FormatValue(bindBool.Value)                
+            );
+
+            yield return new KeyValuePair<string, object>(
+                bindBool.Event, 
+                EventCallback.Factory.CreateBinder(bindBool.Receiver, bindBool.OnChange, bindBool.Value)
+            );
+        }
+    }   
+
     private static void AddAttributes(int sequenceNumber, RenderTreeBuilder builder, Attribute[] attributes)
     {
         builder.AddMultipleAttributes(
             sequenceNumber,
-            from attribute in attributes
-            select new KeyValuePair<string, object>(attribute.Name, attribute.Value)
+            attributes.SelectMany(GetAttributes)
         );
     }
 }

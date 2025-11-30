@@ -4,417 +4,417 @@ namespace BlazorDSL {
     public static partial class Html {
         
             public static Attribute abbr(string className)
-                => new Attribute("abbr", className);
+                => new SimpleAttribute("abbr", className);
 
             public static Attribute accept(string className)
-                => new Attribute("accept", className);
+                => new SimpleAttribute("accept", className);
 
             public static Attribute acceptCharset(string className)
-                => new Attribute("accept-charset", className);
+                => new SimpleAttribute("accept-charset", className);
 
             public static Attribute accesskey(string className)
-                => new Attribute("accesskey", className);
+                => new SimpleAttribute("accesskey", className);
 
             public static Attribute action(string className)
-                => new Attribute("action", className);
+                => new SimpleAttribute("action", className);
 
             public static Attribute allow(string className)
-                => new Attribute("allow", className);
+                => new SimpleAttribute("allow", className);
 
             public static Attribute allowfullscreen(string className)
-                => new Attribute("allowfullscreen", className);
+                => new SimpleAttribute("allowfullscreen", className);
 
             public static Attribute alpha(string className)
-                => new Attribute("alpha", className);
+                => new SimpleAttribute("alpha", className);
 
             public static Attribute alt(string className)
-                => new Attribute("alt", className);
+                => new SimpleAttribute("alt", className);
 
             public static Attribute @as(string className)
-                => new Attribute("as", className);
+                => new SimpleAttribute("as", className);
 
             public static Attribute async(string className)
-                => new Attribute("async", className);
+                => new SimpleAttribute("async", className);
 
             public static Attribute autocapitalize(string className)
-                => new Attribute("autocapitalize", className);
+                => new SimpleAttribute("autocapitalize", className);
 
             public static Attribute autocomplete(string className)
-                => new Attribute("autocomplete", className);
+                => new SimpleAttribute("autocomplete", className);
 
             public static Attribute autocorrect(string className)
-                => new Attribute("autocorrect", className);
+                => new SimpleAttribute("autocorrect", className);
 
             public static Attribute autofocus(string className)
-                => new Attribute("autofocus", className);
+                => new SimpleAttribute("autofocus", className);
 
             public static Attribute autoplay(string className)
-                => new Attribute("autoplay", className);
+                => new SimpleAttribute("autoplay", className);
 
             public static Attribute blocking(string className)
-                => new Attribute("blocking", className);
+                => new SimpleAttribute("blocking", className);
 
             public static Attribute charset(string className)
-                => new Attribute("charset", className);
+                => new SimpleAttribute("charset", className);
 
             public static Attribute @checked(string className)
-                => new Attribute("checked", className);
+                => new SimpleAttribute("checked", className);
 
             public static Attribute cite(string className)
-                => new Attribute("cite", className);
+                => new SimpleAttribute("cite", className);
 
             public static Attribute className(string className)
-                => new Attribute("class", className);
+                => new SimpleAttribute("class", className);
 
             public static Attribute closedby(string className)
-                => new Attribute("closedby", className);
+                => new SimpleAttribute("closedby", className);
 
             public static Attribute color(string className)
-                => new Attribute("color", className);
+                => new SimpleAttribute("color", className);
 
             public static Attribute colorspace(string className)
-                => new Attribute("colorspace", className);
+                => new SimpleAttribute("colorspace", className);
 
             public static Attribute cols(string className)
-                => new Attribute("cols", className);
+                => new SimpleAttribute("cols", className);
 
             public static Attribute colspan(string className)
-                => new Attribute("colspan", className);
+                => new SimpleAttribute("colspan", className);
 
             public static Attribute content(string className)
-                => new Attribute("content", className);
+                => new SimpleAttribute("content", className);
 
             public static Attribute contenteditable(string className)
-                => new Attribute("contenteditable", className);
+                => new SimpleAttribute("contenteditable", className);
 
             public static Attribute controls(string className)
-                => new Attribute("controls", className);
+                => new SimpleAttribute("controls", className);
 
             public static Attribute coords(string className)
-                => new Attribute("coords", className);
+                => new SimpleAttribute("coords", className);
 
             public static Attribute crossorigin(string className)
-                => new Attribute("crossorigin", className);
+                => new SimpleAttribute("crossorigin", className);
 
             public static Attribute data(string className)
-                => new Attribute("data", className);
+                => new SimpleAttribute("data", className);
 
             public static Attribute datetime(string className)
-                => new Attribute("datetime", className);
+                => new SimpleAttribute("datetime", className);
 
             public static Attribute decoding(string className)
-                => new Attribute("decoding", className);
+                => new SimpleAttribute("decoding", className);
 
             public static Attribute @default(string className)
-                => new Attribute("default", className);
+                => new SimpleAttribute("default", className);
 
             public static Attribute defer(string className)
-                => new Attribute("defer", className);
+                => new SimpleAttribute("defer", className);
 
             public static Attribute dir(string className)
-                => new Attribute("dir", className);
+                => new SimpleAttribute("dir", className);
 
             public static Attribute dirname(string className)
-                => new Attribute("dirname", className);
+                => new SimpleAttribute("dirname", className);
 
             public static Attribute disabled(string className)
-                => new Attribute("disabled", className);
+                => new SimpleAttribute("disabled", className);
 
             public static Attribute download(string className)
-                => new Attribute("download", className);
+                => new SimpleAttribute("download", className);
 
             public static Attribute draggable(string className)
-                => new Attribute("draggable", className);
+                => new SimpleAttribute("draggable", className);
 
             public static Attribute enctype(string className)
-                => new Attribute("enctype", className);
+                => new SimpleAttribute("enctype", className);
 
             public static Attribute enterkeyhint(string className)
-                => new Attribute("enterkeyhint", className);
+                => new SimpleAttribute("enterkeyhint", className);
 
             public static Attribute fetchpriority(string className)
-                => new Attribute("fetchpriority", className);
+                => new SimpleAttribute("fetchpriority", className);
 
             public static Attribute @for(string className)
-                => new Attribute("for", className);
+                => new SimpleAttribute("for", className);
 
             public static Attribute form(string className)
-                => new Attribute("form", className);
+                => new SimpleAttribute("form", className);
 
             public static Attribute formaction(string className)
-                => new Attribute("formaction", className);
+                => new SimpleAttribute("formaction", className);
 
             public static Attribute formenctype(string className)
-                => new Attribute("formenctype", className);
+                => new SimpleAttribute("formenctype", className);
 
             public static Attribute formmethod(string className)
-                => new Attribute("formmethod", className);
+                => new SimpleAttribute("formmethod", className);
 
             public static Attribute formnovalidate(string className)
-                => new Attribute("formnovalidate", className);
+                => new SimpleAttribute("formnovalidate", className);
 
             public static Attribute formtarget(string className)
-                => new Attribute("formtarget", className);
+                => new SimpleAttribute("formtarget", className);
 
             public static Attribute headers(string className)
-                => new Attribute("headers", className);
+                => new SimpleAttribute("headers", className);
 
             public static Attribute height(string className)
-                => new Attribute("height", className);
+                => new SimpleAttribute("height", className);
 
             public static Attribute hidden(string className)
-                => new Attribute("hidden", className);
+                => new SimpleAttribute("hidden", className);
 
             public static Attribute high(string className)
-                => new Attribute("high", className);
+                => new SimpleAttribute("high", className);
 
             public static Attribute href(string className)
-                => new Attribute("href", className);
+                => new SimpleAttribute("href", className);
 
             public static Attribute hreflang(string className)
-                => new Attribute("hreflang", className);
+                => new SimpleAttribute("hreflang", className);
 
             public static Attribute httpEquiv(string className)
-                => new Attribute("http-equiv", className);
+                => new SimpleAttribute("http-equiv", className);
 
             public static Attribute id(string className)
-                => new Attribute("id", className);
+                => new SimpleAttribute("id", className);
 
             public static Attribute imagesizes(string className)
-                => new Attribute("imagesizes", className);
+                => new SimpleAttribute("imagesizes", className);
 
             public static Attribute imagesrcset(string className)
-                => new Attribute("imagesrcset", className);
+                => new SimpleAttribute("imagesrcset", className);
 
             public static Attribute inert(string className)
-                => new Attribute("inert", className);
+                => new SimpleAttribute("inert", className);
 
             public static Attribute inputmode(string className)
-                => new Attribute("inputmode", className);
+                => new SimpleAttribute("inputmode", className);
 
             public static Attribute integrity(string className)
-                => new Attribute("integrity", className);
+                => new SimpleAttribute("integrity", className);
 
             public static Attribute @is(string className)
-                => new Attribute("is", className);
+                => new SimpleAttribute("is", className);
 
             public static Attribute ismap(string className)
-                => new Attribute("ismap", className);
+                => new SimpleAttribute("ismap", className);
 
             public static Attribute itemid(string className)
-                => new Attribute("itemid", className);
+                => new SimpleAttribute("itemid", className);
 
             public static Attribute itemprop(string className)
-                => new Attribute("itemprop", className);
+                => new SimpleAttribute("itemprop", className);
 
             public static Attribute itemref(string className)
-                => new Attribute("itemref", className);
+                => new SimpleAttribute("itemref", className);
 
             public static Attribute itemscope(string className)
-                => new Attribute("itemscope", className);
+                => new SimpleAttribute("itemscope", className);
 
             public static Attribute itemtype(string className)
-                => new Attribute("itemtype", className);
+                => new SimpleAttribute("itemtype", className);
 
             public static Attribute kind(string className)
-                => new Attribute("kind", className);
+                => new SimpleAttribute("kind", className);
 
             public static Attribute label(string className)
-                => new Attribute("label", className);
+                => new SimpleAttribute("label", className);
 
             public static Attribute lang(string className)
-                => new Attribute("lang", className);
+                => new SimpleAttribute("lang", className);
 
             public static Attribute list(string className)
-                => new Attribute("list", className);
+                => new SimpleAttribute("list", className);
 
             public static Attribute loading(string className)
-                => new Attribute("loading", className);
+                => new SimpleAttribute("loading", className);
 
             public static Attribute loop(string className)
-                => new Attribute("loop", className);
+                => new SimpleAttribute("loop", className);
 
             public static Attribute low(string className)
-                => new Attribute("low", className);
+                => new SimpleAttribute("low", className);
 
             public static Attribute max(string className)
-                => new Attribute("max", className);
+                => new SimpleAttribute("max", className);
 
             public static Attribute maxlength(string className)
-                => new Attribute("maxlength", className);
+                => new SimpleAttribute("maxlength", className);
 
             public static Attribute media(string className)
-                => new Attribute("media", className);
+                => new SimpleAttribute("media", className);
 
             public static Attribute method(string className)
-                => new Attribute("method", className);
+                => new SimpleAttribute("method", className);
 
             public static Attribute min(string className)
-                => new Attribute("min", className);
+                => new SimpleAttribute("min", className);
 
             public static Attribute minlength(string className)
-                => new Attribute("minlength", className);
+                => new SimpleAttribute("minlength", className);
 
             public static Attribute multiple(string className)
-                => new Attribute("multiple", className);
+                => new SimpleAttribute("multiple", className);
 
             public static Attribute muted(string className)
-                => new Attribute("muted", className);
+                => new SimpleAttribute("muted", className);
 
             public static Attribute name(string className)
-                => new Attribute("name", className);
+                => new SimpleAttribute("name", className);
 
             public static Attribute nomodule(string className)
-                => new Attribute("nomodule", className);
+                => new SimpleAttribute("nomodule", className);
 
             public static Attribute nonce(string className)
-                => new Attribute("nonce", className);
+                => new SimpleAttribute("nonce", className);
 
             public static Attribute novalidate(string className)
-                => new Attribute("novalidate", className);
+                => new SimpleAttribute("novalidate", className);
 
             public static Attribute open(string className)
-                => new Attribute("open", className);
+                => new SimpleAttribute("open", className);
 
             public static Attribute optimum(string className)
-                => new Attribute("optimum", className);
+                => new SimpleAttribute("optimum", className);
 
             public static Attribute pattern(string className)
-                => new Attribute("pattern", className);
+                => new SimpleAttribute("pattern", className);
 
             public static Attribute ping(string className)
-                => new Attribute("ping", className);
+                => new SimpleAttribute("ping", className);
 
             public static Attribute placeholder(string className)
-                => new Attribute("placeholder", className);
+                => new SimpleAttribute("placeholder", className);
 
             public static Attribute playsinline(string className)
-                => new Attribute("playsinline", className);
+                => new SimpleAttribute("playsinline", className);
 
             public static Attribute popover(string className)
-                => new Attribute("popover", className);
+                => new SimpleAttribute("popover", className);
 
             public static Attribute popovertarget(string className)
-                => new Attribute("popovertarget", className);
+                => new SimpleAttribute("popovertarget", className);
 
             public static Attribute popovertargetaction(string className)
-                => new Attribute("popovertargetaction", className);
+                => new SimpleAttribute("popovertargetaction", className);
 
             public static Attribute poster(string className)
-                => new Attribute("poster", className);
+                => new SimpleAttribute("poster", className);
 
             public static Attribute preload(string className)
-                => new Attribute("preload", className);
+                => new SimpleAttribute("preload", className);
 
             public static Attribute @readonly(string className)
-                => new Attribute("readonly", className);
+                => new SimpleAttribute("readonly", className);
 
             public static Attribute referrerpolicy(string className)
-                => new Attribute("referrerpolicy", className);
+                => new SimpleAttribute("referrerpolicy", className);
 
             public static Attribute rel(string className)
-                => new Attribute("rel", className);
+                => new SimpleAttribute("rel", className);
 
             public static Attribute required(string className)
-                => new Attribute("required", className);
+                => new SimpleAttribute("required", className);
 
             public static Attribute reversed(string className)
-                => new Attribute("reversed", className);
+                => new SimpleAttribute("reversed", className);
 
             public static Attribute rows(string className)
-                => new Attribute("rows", className);
+                => new SimpleAttribute("rows", className);
 
             public static Attribute rowspan(string className)
-                => new Attribute("rowspan", className);
+                => new SimpleAttribute("rowspan", className);
 
             public static Attribute sandbox(string className)
-                => new Attribute("sandbox", className);
+                => new SimpleAttribute("sandbox", className);
 
             public static Attribute scope(string className)
-                => new Attribute("scope", className);
+                => new SimpleAttribute("scope", className);
 
             public static Attribute selected(string className)
-                => new Attribute("selected", className);
+                => new SimpleAttribute("selected", className);
 
             public static Attribute shadowrootclonable(string className)
-                => new Attribute("shadowrootclonable", className);
+                => new SimpleAttribute("shadowrootclonable", className);
 
             public static Attribute shadowrootdelegatesfocus(string className)
-                => new Attribute("shadowrootdelegatesfocus", className);
+                => new SimpleAttribute("shadowrootdelegatesfocus", className);
 
             public static Attribute shadowrootmode(string className)
-                => new Attribute("shadowrootmode", className);
+                => new SimpleAttribute("shadowrootmode", className);
 
             public static Attribute shadowrootserializable(string className)
-                => new Attribute("shadowrootserializable", className);
+                => new SimpleAttribute("shadowrootserializable", className);
 
             public static Attribute shape(string className)
-                => new Attribute("shape", className);
+                => new SimpleAttribute("shape", className);
 
             public static Attribute size(string className)
-                => new Attribute("size", className);
+                => new SimpleAttribute("size", className);
 
             public static Attribute sizes(string className)
-                => new Attribute("sizes", className);
+                => new SimpleAttribute("sizes", className);
 
             public static Attribute slot(string className)
-                => new Attribute("slot", className);
+                => new SimpleAttribute("slot", className);
 
             public static Attribute span(string className)
-                => new Attribute("span", className);
+                => new SimpleAttribute("span", className);
 
             public static Attribute spellcheck(string className)
-                => new Attribute("spellcheck", className);
+                => new SimpleAttribute("spellcheck", className);
 
             public static Attribute src(string className)
-                => new Attribute("src", className);
+                => new SimpleAttribute("src", className);
 
             public static Attribute srcdoc(string className)
-                => new Attribute("srcdoc", className);
+                => new SimpleAttribute("srcdoc", className);
 
             public static Attribute srclang(string className)
-                => new Attribute("srclang", className);
+                => new SimpleAttribute("srclang", className);
 
             public static Attribute srcset(string className)
-                => new Attribute("srcset", className);
+                => new SimpleAttribute("srcset", className);
 
             public static Attribute start(string className)
-                => new Attribute("start", className);
+                => new SimpleAttribute("start", className);
 
             public static Attribute step(string className)
-                => new Attribute("step", className);
+                => new SimpleAttribute("step", className);
 
             public static Attribute style(string className)
-                => new Attribute("style", className);
+                => new SimpleAttribute("style", className);
 
             public static Attribute tabindex(string className)
-                => new Attribute("tabindex", className);
+                => new SimpleAttribute("tabindex", className);
 
             public static Attribute target(string className)
-                => new Attribute("target", className);
+                => new SimpleAttribute("target", className);
 
             public static Attribute title(string className)
-                => new Attribute("title", className);
+                => new SimpleAttribute("title", className);
 
             public static Attribute translate(string className)
-                => new Attribute("translate", className);
+                => new SimpleAttribute("translate", className);
 
             public static Attribute type(string className)
-                => new Attribute("type", className);
+                => new SimpleAttribute("type", className);
 
             public static Attribute usemap(string className)
-                => new Attribute("usemap", className);
+                => new SimpleAttribute("usemap", className);
 
             public static Attribute value(string className)
-                => new Attribute("value", className);
+                => new SimpleAttribute("value", className);
 
             public static Attribute width(string className)
-                => new Attribute("width", className);
+                => new SimpleAttribute("width", className);
 
             public static Attribute wrap(string className)
-                => new Attribute("wrap", className);
+                => new SimpleAttribute("wrap", className);
 
             public static Attribute writingsuggestions(string className)
-                => new Attribute("writingsuggestions", className);
+                => new SimpleAttribute("writingsuggestions", className);
     }
 }

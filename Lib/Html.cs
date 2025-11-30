@@ -13,7 +13,7 @@ public static partial class Html {
     public static Node empty() => EmptyNode.Instance;
 
     public static Attribute parameter(string name, object value)
-        => new Attribute(name, value);
+        => new SimpleAttribute(name, value);
 
     public static Node text(string text)
         => new TextNode(text);
@@ -23,7 +23,7 @@ public static partial class Html {
     #region templateParameter
 
     public static Attribute templateParameter(string key, params Node[] template)
-        => new Attribute(
+        => new SimpleAttribute(
                 key,
             (RenderFragment)(
                 (RenderTreeBuilder builder) => {
@@ -33,7 +33,7 @@ public static partial class Html {
         );
 
     public static Attribute templateParameter(string key, Func<Node> template)
-        => new Attribute(
+        => new SimpleAttribute(
                 key,                
             (RenderFragment)(
                 (RenderTreeBuilder builder) => {
@@ -43,7 +43,7 @@ public static partial class Html {
         );
 
     public static Attribute templateParameter<TContext>(string key, Func<TContext, Node> template)
-        => new Attribute(
+        => new SimpleAttribute(
             key,                
             (RenderFragment<TContext>)(
                 (TContext context) =>

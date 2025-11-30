@@ -51,7 +51,7 @@ namespace BlazorDSL {
             return
             $@"
             public static Attribute {methodName}(object sender, Action<{actionType}> callback)
-                => new Attribute(
+                => new SimpleAttribute(
                     ""{attibuteName}"",
                     EventCallback.Factory.Create(sender, callback)
                 );";

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Mvc.TagHelpers;
 using static BlazorDSL.Html;
 
 namespace BlazorDSL.Components.Pages;
@@ -7,18 +8,16 @@ namespace BlazorDSL.Components.Pages;
 public partial class Todo : WebComponent
 {        
     protected override Node Render() =>
-        div(
+        Tags(
             h2("Todo-Liste DSL"),
 
             div([className("TodoList")],
                 ul(
                     from item in _items
-                    select li(
-                        [className(item.Done ? "Done" : "")],
+                    select li([className(item.Done ? "Done" : "")],
                         input([
                             type("checkbox"),
-                            // @bind-value kann noch nicht
-                            // über die DSL ausgedrückt werden.
+                            bind.change.@checked(this, item.Done, newValue => item.Done = newValue)                            
                         ]),
                         div(item.Text)
                     )
@@ -32,8 +31,7 @@ public partial class Todo : WebComponent
                     [onSubmit(this, e => AddItem())],
                     input([
                         type("text"),
-                        // @bind-value kann noch nicht
-                        // über die DSL ausgedrückt werden.
+                        bind.input.@string(this, this.inputValue, newValue => this.inputValue = newValue)                        
                     ]),
                     button([type("submit")], "Hinzufügen")
                 )
