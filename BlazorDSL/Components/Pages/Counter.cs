@@ -19,7 +19,18 @@ public partial class Counter : ComponentBase
                         [], 
                         inner => inner.ForEach(
                             names,
-                            (inner, name) => inner.p(name)
+                            (inner, name) => {
+                                var styleValue = name.StartsWith("j", StringComparison.OrdinalIgnoreCase)
+                                    ? "background: green"
+                                    : "";
+
+                                inner.p(
+                                    [
+                                        style(styleValue)
+                                    ],
+                                    name
+                                );
+                            }
                         )
                     )
                     .p("Current count: " + currentCount)
