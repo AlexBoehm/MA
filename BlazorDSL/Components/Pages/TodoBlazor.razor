@@ -40,4 +40,7 @@
 
         _inputValue = "";
     }
+
+    private static RenderFragment RenderItem(TodoItem item)
+        => @<li>@item.Text</li>;
 }
