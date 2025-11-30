@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Rendering;
-using Microsoft.AspNetCore.Components.Web;
 
 namespace BlazorDSL;
 
@@ -15,6 +14,11 @@ public static partial class Html {
 
     public static Attribute parameter(string name, object value)
         => new Attribute(name, value);
+
+    public static Node text(string text)
+        => new TextNode(text);
+
+    public static Node DocTypeHtml() => new TagNode("!DOCTYPE html");
 
     #region templateParameter
 

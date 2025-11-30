@@ -23,7 +23,7 @@ public partial class Counter : WebComponent
                         Cond(
                             name.StartsWith("J"),
                             () => button(
-                                [onClick(this, () => names.Remove(name))],
+                                [onClick(this, _ => names.Remove(name))],
                                 "delete"
                             ),
                             () => empty()
@@ -32,7 +32,7 @@ public partial class Counter : WebComponent
                 ),
                 button([
                     className("btn btn-primary"),
-                    onClick(this, IncrementCount)],
+                    onClick(this, _ => IncrementCount())],
                     "Click me"
                 )
             )
