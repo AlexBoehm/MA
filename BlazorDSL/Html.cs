@@ -80,11 +80,19 @@ static class Html {
 
     #region Components
 
-        public static Node Component<TComponent>()
-            => new ComponentNode(typeof(TComponent));
+    public static Node Component<TComponent>()
+        => new ComponentNode(typeof(TComponent));
 
-        public static Node Component<TComponent>(Attribute[] parameters)
-            => new ComponentNode(typeof(TComponent), parameters);
+    public static Node Component<TComponent>(Attribute[] parameters)
+        => new ComponentNode(typeof(TComponent), parameters);
+
+    public static Node Component<TComponent>(Attribute[] parameters, params Node[] childContent)
+        => new ComponentNode(
+            typeof(TComponent),
+            childContent.Length == 0
+                ? parameters
+                : parameters.Concat([templateParameter("ChildContent", childContent)]).ToArray()
+            );
 
     #endregion
 }

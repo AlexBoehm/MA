@@ -9,10 +9,10 @@ public partial class Counter : WebComponent
     protected override Node Render() =>
         div(
             h1("counter"),
-            Component<Greeting>([
-                parameter("Name", "Max Mustermann"),
-                templateParameter("ChildContent", text("Das ist eine Nachricht"))
-            ]),
+            Component<Greeting>(
+                [parameter("Name", "Max Mustermann")],
+                text("Das ist eine Nachricht")
+            ),
             div(
                 [className("box")],
                 p("Current Count: " + currentCount),
