@@ -1,0 +1,34 @@
+<div class="todo-app">
+    <h2>Todo-Liste</h2>
+    <div class="todo-list">
+        <ul>
+            @foreach (var item in Items)
+            {
+                <li class="@(item.Done ? "done" : "")">
+                    <input type="checkbox" @bind="item.Done" />
+                    <span>@item.Text</span>
+                </li>
+            }
+        </ul>
+        <div class="stats">
+            Erledigt: @(Items.Count(x => x.Done))/@(Items.Count)
+        </div>
+        <form @onsubmit="AddItem">
+            <input type="text" @bind="_inputValue" />
+            <button type="submit">Hinzufügen</button>
+        </form>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public List<TodoItem> Items { get; set; } = [];
+
+    private string _inputValue = "";
+
+    private void AddItem()
+    {
+        Items.Add(new TodoItem { Text = _inputValue, Done = false });
+        _inputValue = "";
+    }
+}
