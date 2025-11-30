@@ -15,6 +15,9 @@ public static partial class Html {
     public static Attribute parameter(string name, object value)
         => new SimpleAttribute(name, value);
 
+    public static Attribute attribute(string key, string value)
+        => new SimpleAttribute(key, value);
+
     public static Node text(string text)
         => new TextNode(text);
 
