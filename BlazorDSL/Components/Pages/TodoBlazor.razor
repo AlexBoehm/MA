@@ -2,24 +2,43 @@
 
 <h2>Todo-Liste Blazor</h2>
 
-<div class="TodoList">
+<div 
+    class="TodoList">
     <ul>
         @foreach (var item in _items)
         {
-            <li class=@(item.Done ? "Done" : "")>
-                <input type="checkbox" @bind="item.Done" />
-                <div>@item.Text</div>
+            <li 
+                class=@(item.Done ? "Done" : "")>
+
+                <input 
+                    type="checkbox" 
+                    @bind="item.Done"
+                />
+
+                <div>
+                    @item.Text
+                </div>
             </li>
         }
     </ul>
 
-    <div class="DoneDisplay">
+    <div
+        class="DoneDisplay">
         Erledigt: @(_items.Count(x => x.Done))/@(_items.Count)
     </div>
 
-    <form @onsubmit="AddItem">
-        <input type="text" @bind-value="_inputValue" />
-        <button type="submit">Hinzufügen</button>
+    <form 
+        @onsubmit="AddItem">
+
+        <input 
+            type="text"
+            @bind-value="_inputValue"
+        />
+
+        <button
+            type="submit">
+            Hinzufügen
+        </button>
     </form>
 </div>
 
