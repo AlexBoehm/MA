@@ -21,12 +21,13 @@ public partial class App : WebComponent
                     link([rel("stylesheet"), href("MainLayout.css")]),
                     link([rel("stylesheet"), href("BlazorDSL.styles.css")]),
                     link([rel("icon"), type("image/png"), href("favicon.png")]),
+                    script([src("videoPlayer.js")]),
                     Component<HeadOutlet>(RenderMode.InteractiveServer)
                 ),
                 body(
                     [],
                     Component<Routes>(RenderMode.InteractiveServer),
-                    script([src("_framework/blazor.web.js")])
+                    script([src("_framework/blazor.web.js")])                    
                 )
             )
         );    

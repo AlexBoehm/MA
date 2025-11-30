@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Mvc.TagHelpers;
 using static BlazorDSL.Html;
+using static BlazorDSL.HtmlExtensions;
 
 namespace BlazorDSL.Components.Pages;
 
@@ -9,6 +9,8 @@ public partial class Todo : WebComponent
 {        
     protected override Node Render() =>
         Tags(
+            videoPlayer(),
+
             h2("Todo-Liste DSL"),
 
             div([className("TodoList")],
