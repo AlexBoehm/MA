@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lib", "Lib\Lib.csproj", "{4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSLMethodsGenerator", "DSLMethodsGenerator\DSLMethodsGenerator.csproj", "{9727EFE7-DF09-4A2F-841D-76BD7AB5988E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lib.MVU", "Lib.MVU\Lib.MVU.csproj", "{77A4223B-23D8-49D7-BD51-FE66AF6CAE0F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{9727EFE7-DF09-4A2F-841D-76BD7AB5988E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9727EFE7-DF09-4A2F-841D-76BD7AB5988E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9727EFE7-DF09-4A2F-841D-76BD7AB5988E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77A4223B-23D8-49D7-BD51-FE66AF6CAE0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77A4223B-23D8-49D7-BD51-FE66AF6CAE0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77A4223B-23D8-49D7-BD51-FE66AF6CAE0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77A4223B-23D8-49D7-BD51-FE66AF6CAE0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
