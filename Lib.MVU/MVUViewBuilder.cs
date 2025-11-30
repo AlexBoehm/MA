@@ -79,4 +79,27 @@ public static class MVUViewBuilder {
             initialize: () => ExecuteCommand(initCommand, dispatch)
         );
     }
+
+    public static (TState State, Action Initialize, Dispatch<TMessage> Dispatch) BuildViewMethodBlazor<TState, TMessage>(
+        Init<TState, TMessage> init,
+        Update<TState, TMessage> update,
+        Action<TState> setState,
+        RenderComponent renderComponent
+    ) {
+        (TState state, Command<TMessage> initCommand) = init();
+
+        void onUpdateState(TState newState)
+        {
+            state = newState;
+            setState(state);
+        }
+
+        Dispatch<TMessage> dispatch = BuildDispatch(update, state, renderComponent, onUpdateState);
+
+        return (
+            State: state,
+            Initialize: () => ExecuteCommand(initCommand, dispatch),
+            Dispatch: dispatch
+        );
+    }
 }

@@ -1,43 +1,64 @@
 ﻿@page "/todo-blazor"
+@using Lib.MVU
+@using BlazorDSL.Components.Pages.Todo
+@using static BlazorDSL.Components.Pages.Todo.Commands
+@inherits MVUBlazorComponent<BlazorDSL.Components.Pages.Todo.State, BlazorDSL.Components.Pages.Todo.Message>
 
 <h2>Todo-Liste Blazor</h2>
 
 <div class="TodoList">
+    <div>
+        <input 
+            type="text" 
+            value="@state.FilterText" 
+            @oninput="@(e => dispatch(new SetFilter((string) e.Value)))"
+        />
+    </div>
+
     <ul>
-        @foreach (var item in _items)
+        @foreach (var item in state.TodoItems.Where(x => state.FilterText == "" || x.Text.Contains(state.FilterText, System.StringComparison.OrdinalIgnoreCase)))
         {
             <li class=@(item.Done ? "Done" : "")>
-                <input type="checkbox" @bind="item.Done"/>
-                <div>@item.Text</div>
+                <input 
+                    type="checkbox" 
+                    value="@item.Done" 
+                    @onchange="@(e => dispatch(new SetItemStatus(item, (bool) e.Value)))"
+                />
+
+                <input 
+                    type="text"
+                    value="@item.Text"
+                    style="@(item.Done ? "text-decoration: line-through": "")"
+                    @onchange="(e => dispatch(new ChangeItemText(item, (string) e.Value)))" />
+
+                <button 
+                    class="Delete" 
+                    @onclick="(e => dispatch(new RemoveItem(item)))"
+                    >x
+                </button>
             </li>
         }
     </ul>
 
     <div class="DoneDisplay">
-        Erledigt: @(_items.Count(x => x.Done))/@(_items.Count)
+        Erledigt: @(state.TodoItems.Count(x => x.Done))/@(state.TodoItems.Count)
     </div>
 
-    <form @onsubmit="AddItem">
-        <input type="text" @bind-value="_inputValue"/>
+    <form @onsubmit="(e => dispatch(new AddItem(state.InputText)))">
+        <input
+            type="text" 
+            value="@state.InputText" 
+            @onchange="@(e => dispatch(new SetInputText((string) e.Value)))"
+        />
+
         <button type="submit">Hinzufügen</button>
     </form>
+
+    <div class="ButtonBox">
+        <button 
+            class="RemoveDone" 
+            @onclick="@(e => dispatch(new RemoveDoneItems()))"
+            >remove all done
+        </button>
+    </div>
 </div>
-
-@code {
-    List<TodoItem> _items = [
-        new TodoItem { Text = "Aufgabe 1", Done = true },
-        new TodoItem { Text = "Aufgabe 2", Done = false },
-        new TodoItem { Text = "Aufgabe 3", Done = false }
-    ];
-
-    string _inputValue { get; set; } = "";
-
-    void AddItem() {
-        _items.Add(new TodoItem{
-            Text = _inputValue,
-            Done = false
-        });
-
-        _inputValue = "";
-    }
-}
