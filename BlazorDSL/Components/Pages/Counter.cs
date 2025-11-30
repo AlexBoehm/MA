@@ -15,6 +15,13 @@ public partial class Counter : ComponentBase
                 Attribute("class", "box")],
                 inner =>
                     inner
+                    .div(
+                        [], 
+                        inner => inner.ForEach(
+                            names,
+                            (inner, name) => inner.p(name)
+                        )
+                    )
                     .p("Current count: " + currentCount)
                     .button([
                         className("btn btn-primary"),
@@ -24,6 +31,16 @@ public partial class Counter : ComponentBase
                     )
                 );
     }
+
+    string[] names = [
+        "George Washington",
+        "John Adams",
+        "Thomas Jefferson",
+        "James Madison",
+        "James Monroe",
+        "John Quincy Adams",
+        "Andrew Jackson"
+    ];
 
     private int currentCount = 0;
 
